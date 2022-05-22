@@ -21,9 +21,9 @@
 
 <br/>
 
-### **1. 계획한 프로젝트**
+## **1. 계획한 프로젝트**
 
-두더지 타일 ( 두더지 게임 + 피아노 타일 )
+**두더지 타일 ( 두더지 게임 + 피아노 타일 )**
 
 ![Pic](./pic/molegame.png)
 ![Pic2](./pic/pianogame.png)
@@ -34,7 +34,7 @@
 
 <br/>
 
-H-smart 4412
+**H-smart 4412**
 
 ![Pic3](./pic/targetsystem.png)
 
@@ -51,7 +51,7 @@ H-smart 4412
 
 <br/>
 
-### **2. 계획한 프로젝트에서 추가한 기능**
+## **2. 계획한 프로젝트에서 추가한 기능**
 
 *   두더지 vs 플레이어 형식의 게임
 *   게임의 승,패는 플레이어가 두더지를 잡지 못했을때 두더지가 점수를 획득하며, 플레이어가 두더지를 잡았을 때 플레이어가 점수를 획득하는 방식.
@@ -63,7 +63,7 @@ H-smart 4412
 
 <br/>
 
-### **3. 참고문헌**
+## **3. 참고문헌**
 
 1. 두더지 게임 사진
 https://www.urbanbrush.net/downloads/%EB%91%90%EB%8D%94%EC%A7%80%EA%B2%8C%EC%9E%84-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8-ai-%EB%AC%B4%EB%A3%8C%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-free-mole-game-vector/
