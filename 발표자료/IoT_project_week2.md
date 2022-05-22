@@ -34,8 +34,6 @@
 
 **게임 장치**
 
-**H-smart 4412**
-
 ![Pic3](./pic/targetsystem.png)
 
 *   dot matrix를 이용해 지속적으로 깜빡이는 불빛에 맞춰 해당
