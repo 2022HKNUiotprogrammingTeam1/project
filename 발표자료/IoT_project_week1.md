@@ -85,3 +85,4 @@ https://webisfree.com/2016-01-25/[%EB%AA%A8%EB%B0%94%EC%9D%BC%EA%B2%8C%EC%9E%84]
 5. H-Smart4412TKU FPGA Board 사진
 https://slidesplayer.org/slide/14109337/
 
+**22.05.17 발표자 정유성**
