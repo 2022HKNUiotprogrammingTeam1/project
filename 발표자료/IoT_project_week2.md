@@ -99,3 +99,4 @@ https://embejied.tistory.com/50
 6. HBE-SM5-S4210로 구현한 두더지게임
 https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=bieemiho92&logNo=220744722833
 
+**22.05.24 발표자 정재현**
