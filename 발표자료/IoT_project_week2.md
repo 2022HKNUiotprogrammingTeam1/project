@@ -36,9 +36,9 @@
 
 **기존에 조사했던 두더지 게임에서는 단순히 두더지가 한마리씩만 나오고 점수만 얻는 형태**
 
-![Pic4](./pic/gameEx2.gif)
+![Pic3](./pic/gameEx2.gif)
 
-![Pic5](./pic/gameEx.gif)
+![Pic4](./pic/gameEx.gif)
 
 하지만 기존 게임은 독창성이 조금 부족하다고 느껴 여러 기능을 추가하였습니다.
 
@@ -62,7 +62,7 @@
 
 ### **게임 장치**
 
-![Pic3](./pic/targetsystem.png)
+![Pic5](./pic/targetsystem.png)
 
 *   8x8 dot matrix중 최외각을 제외한 6x6크기의 matrix에서 두더지 한마리의 크기를 2x2크기로 하는 3x3 필드
 
