@@ -9,6 +9,7 @@
 **목차**
 
 1. 외부 입출력 장치 작동 확인
+----------------------------
 
 코드를 통해 타겟시스템의 외부 입출력 장치를 작동시키는법을 알고자
 테스트를 진행하였음.
@@ -23,6 +24,7 @@ Tera Term에서 chmod 777 [파일명] -> ./[파일명]
 
 
 2. 두더지 생성
+--------------
 
 ![molerandom](https://user-images.githubusercontent.com/42956142/171040131-35691f1e-3d91-4ef9-97e8-e59a82b54963.gif)
 
@@ -35,6 +37,7 @@ DotMatrix에 두더지를 랜덤하게 생성하도록 하였다.
 
 
 3. Dot Matrix <-> tact sw 연동 확인
+-----------------------------------
 
 ![tactsw](https://user-images.githubusercontent.com/42956142/171039957-e1ea9ae1-1c56-48c6-8567-4dffea4b4a04.gif)
 
@@ -48,6 +51,7 @@ tact sw와 Dot Matrix가 연동되도록 코드를 작성하였다.
 향후 10, 11번 버튼을 통해 아이템을 사용할수 있도록 할 예정.
 
 4. 코드
+-------
 
 ```C
 #include <asm/ioctls.h>
@@ -101,6 +105,7 @@ int main() {
 ```
 
 5. 참고 문헌
+------------
 
 hello world 만들기
 https://comonyo.tistory.com/5
