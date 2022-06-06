@@ -30,29 +30,41 @@
 
 <br/>
 
-## 3. 두더지 게임 1,2,3 단계 스테이지 코드
+## 3. 두더지 게임 1,2,3 단계 코드
 
 [Mole_Stage.c](https://github.com/2022HKNUiotprogrammingTeam1/project/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/Code/Mole_Stage.c)
 
-**스테이지 1,2,3 단계 영상**
+<br/>
+
+**Stage 1,2,3 영상**
 
 https://www.youtube.com/watch?v=etlcd87EK2s
 
 <br/>
 
-##  아이템과 점수, 스테이지를 적용한 게임 영상
+## 4. 아이템과 점수 코드
+
+[Mole_CLCD.c](https://github.com/2022HKNUiotprogrammingTeam1/project/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/Code/Mole_CLCD.c)
+
+<br/>
+
+## 5. 아이템과 점수, 스테이지를 적용한 영상
 
 https://www.youtube.com/shorts/duuKuOObT9s
 
+<br/>
 
+**코드**
+
+[Mole_Game_main.c](https://github.com/2022HKNUiotprogrammingTeam1/project/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/Code/Mole_Game_main.c)
 
 <br/>
 
 ## 마지막 점검 사항
 
-**+ 두더지 생성 속도를 조절**
+**+ 속도를 조절해 게임의 난이도를 조절**
 
-**+ 코딩한 내용들을 합치기**
+**+ 아이템의 개수를 led로 표시**
 
 
 
