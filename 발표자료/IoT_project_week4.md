@@ -78,5 +78,5 @@ https://www.youtube.com/shorts/duuKuOObT9s
 
 ## 7. 참고 문헌
 
-
++ **[CLCD 예시 코드](https://hongci.tistory.com/90?category=219350)**
 
