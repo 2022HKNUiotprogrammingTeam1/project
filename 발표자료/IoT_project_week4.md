@@ -65,12 +65,7 @@ https://www.youtube.com/shorts/duuKuOObT9s
 
 + **획득한 아이템의 개수를 led로 표시**
 
-+ **플레이어와 두더지의 승,패 **
-
-
-
-
-
++ **플레이어와 두더지의 승,패**
 
 
 <br/>
