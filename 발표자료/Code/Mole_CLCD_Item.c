@@ -193,44 +193,7 @@ int main() {
                     printf("score_player : %d\n", score_player);   
                 }
             }
-        }   
-        /*
-        if (num == 10 && 1 <= item <= 3)
-        {
-            if(item == 1)
-            {
-                close(dev);
-                item--;
-                num == 0;
-                int x = 1;
-                for(x;x<11;x++)        
-                {
-                    random = (rand()%9) + 1;
-                    dot = open(dot_d, O_RDWR);
-                    write(dot, &mole[random-1], sizeof(mole));
-                    usleep(250000);
-                    close(dot);
-                    score_player += 1;
-                    printf("score_player : %d\n", score_player);   
-                }
-            }
-            else if(item == 2)
-            {}
-            item--;
-            num == 0;
-            int x = 1;
-            for(x;x<11;x++)        
-            {
-                random = (rand()%9) + 1;
-                dot = open(dot_d, O_RDWR);
-                write(dot, &mole[random-1], sizeof(mole));
-                usleep(250000);
-                close(dot);
-                score_player += 1;
-                printf("score_player : %d\n", score_player);   
-            }
-        }*/
-        
+        }  
         if(isStop == 1)
         {
             break;
