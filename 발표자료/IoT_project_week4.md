@@ -28,7 +28,7 @@
 
 ## 3. 두더지 게임 1,2,3 단계 스테이지 코드
 
-[Mole_Stage.c](https://github.com/2022HKNUiotprogrammingTeam1/project/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/Code/molestage.c)
+[Mole_Stage.c](https://github.com/2022HKNUiotprogrammingTeam1/project/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/Code/Mole_Stage.c)
 
 
 
