@@ -15,4 +15,4 @@
 
 [코드 이름](깃허브 주소)
 
-[!](https://youtu.be/etlcd87EK2s)
+[!]([https://youtu.be/etlcd87EK2s](https://www.youtube.com/watch?v=etlcd87EK2s))
