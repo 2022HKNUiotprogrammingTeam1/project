@@ -10,11 +10,15 @@
 
 ## 1. 구현한 코드들과 내용
 
-+ CLCD에 플레이어의 점수와 두더지의 점수를 표시
++ 플레이어의 점수와 두더지의 점수를 CLCD에 표시
 
 + 10번 스위치를 눌렀을 때 아이템 사용 가능. 두더지 10마리를 자동으로 잡아준다.
 
-+ 
++ 두더지는 한마리당 1점이다.
+
++ 두더지를 놓쳤을 경우 두더지가 점수를 얻는다.
+
++ 플레이어가 10점 단위로 점수를 얻었을 경우 다음 스테이지를 진행한다.
 
 <br/>
 
@@ -30,12 +34,16 @@
 
 [Mole_Stage.c](https://github.com/2022HKNUiotprogrammingTeam1/project/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/Code/Mole_Stage.c)
 
+**스테이지 1,2,3 단계 영상**
 
+https://www.youtube.com/watch?v=etlcd87EK2s
 
 <br/>
 
-##  게임 작동 영상
-https://www.youtube.com/watch?v=etlcd87EK2s
+##  아이템과 점수, 스테이지를 적용한 게임 영상
+
+https://www.youtube.com/shorts/duuKuOObT9s
+
 
 
 <br/>
@@ -45,8 +53,6 @@ https://www.youtube.com/watch?v=etlcd87EK2s
 **+ 두더지 생성 속도를 조절**
 
 **+ 코딩한 내용들을 합치기**
-
-
 
 
 
