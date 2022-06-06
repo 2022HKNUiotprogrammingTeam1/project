@@ -66,6 +66,8 @@ https://www.youtube.com/shorts/duuKuOObT9s
 
 + **획득한 아이템의 개수를 led로 표시**
 
++ **두더지 점수 CLCD에 적용**
+
 + **플레이어와 두더지의 승,패**
 
 
