@@ -51,6 +51,8 @@ https://www.youtube.com/watch?v=etlcd87EK2s
 
 https://www.youtube.com/shorts/duuKuOObT9s
 
+![Pic](./pic/CLCD.jpg)
+
 <br/>
 
 **코드**
