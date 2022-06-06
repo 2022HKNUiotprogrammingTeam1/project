@@ -15,4 +15,6 @@
 
 [코드 이름](깃허브 주소)
 
-[!]([https://youtu.be/etlcd87EK2s](https://www.youtube.com/watch?v=etlcd87EK2s))
+[![https://youtu.be/etlcd87EK2s](https://www.youtube.com/watch?v=etlcd87EK2s)](https://www.youtube.com/watch?v=etlcd87EK2s)
+
+[![이미지 텍스트](스크린샷 이미지)](동영상 링크)
