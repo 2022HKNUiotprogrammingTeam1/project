@@ -59,7 +59,7 @@ https://www.youtube.com/shorts/duuKuOObT9s
 
 <br/>
 
-## 마지막 점검 사항
+## 6. 마지막 점검 사항
 
 + **속도를 조절해 게임의 난이도를 조절**
 
@@ -70,7 +70,7 @@ https://www.youtube.com/shorts/duuKuOObT9s
 
 <br/>
 
-## 5. 참고 문헌
+## 7. 참고 문헌
 
 
 
