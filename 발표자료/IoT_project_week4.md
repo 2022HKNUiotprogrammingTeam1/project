@@ -51,6 +51,9 @@ https://www.youtube.com/watch?v=etlcd87EK2s
 
 https://www.youtube.com/shorts/duuKuOObT9s
 
+
+**플레이어 점수와 두더지 점수**
+
 ![Pic](./pic/CLCD.jpg)
 
 <br/>
