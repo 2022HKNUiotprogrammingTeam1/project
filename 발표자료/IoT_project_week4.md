@@ -43,7 +43,7 @@ https://www.youtube.com/watch?v=etlcd87EK2s
 
 ## 4. 아이템과 점수 코드
 
-[Mole_CLCD.c](https://github.com/2022HKNUiotprogrammingTeam1/project/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/Code/Mole_CLCD.c)
+[Mole_CLCD_Item.c](https://github.com/2022HKNUiotprogrammingTeam1/project/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/Code/Mole_CLCD_Item.c)
 
 <br/>
 
