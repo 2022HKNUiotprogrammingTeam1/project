@@ -54,7 +54,6 @@ https://www.youtube.com/shorts/duuKuOObT9s
 <br/>
 
 **코드**
-
 [Mole_Game_main.c](https://github.com/2022HKNUiotprogrammingTeam1/project/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/Code/Mole_Game_main.c)
 
 <br/>
