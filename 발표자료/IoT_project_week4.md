@@ -7,18 +7,52 @@
 **발표자 : 정재현**
 <br/>
 
-### 저번 발표 이후 추가된 내용
-+ 
-+ 
+## 1. 구현한 코드들과 내용
+
++ CLCD에 플레이어의 점수와 두더지의 점수를 표시
+
++ 10번 스위치를 눌렀을 때 아이템 사용 가능. 두더지 10마리를 자동으로 잡아준다.
+
 + 
 
 
-### 두더지 게임 1,2,3 단계 스테이지 코드
+## 
+
+**+ 스테이지 1단계에서는 두더지가 1마리씩,  스테이지 2단계에서는 두더지가 2마리씩, 스테이지 3단계에서는 두더지가 3마리씩 나온다.**
+
+
+
+## 3. 두더지 게임 1,2,3 단계 스테이지 코드
 
 [Mole_Stage.c](https://github.com/2022HKNUiotprogrammingTeam1/project/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/Code/molestage.c)
 
 
 
-###  영상
+##  게임 작동 영상
 https://www.youtube.com/watch?v=etlcd87EK2s
 
+
+## 마지막 점검 사항
+
+**+ 두더지 생성 속도를 조절**
+
+**+ 코딩한 내용들을 합치기**
+
+
+
+
+
+향후 10, 11번 버튼을 통해 아이템을 사용할수 있도록 할 예정.
+
+
+
+## 5. 참고 문헌
+
+hello world 만들기
+https://comonyo.tistory.com/5
+
+Dot matrix 작동하기
+https://comonyo.tistory.com/16
+
+tact sw 작동하기
+https://deepbugging.tistory.com/entry/HSMART-4412-%EC%97%90%EC%84%9C-Tact-Swich-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0
