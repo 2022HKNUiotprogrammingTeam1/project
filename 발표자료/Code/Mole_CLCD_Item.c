@@ -32,7 +32,7 @@ unsigned char mole[9][8] = {
 
 unsigned char printmatrix[8] = {0};
 
-void clcd_input2(int score_player, int score_mole)
+void clcd_input2(int score_player, int score_mole)  // CLCD 
 {
     int clcd;
     char player_score[5];
@@ -58,7 +58,7 @@ int main() {
     int dot = 0;
     int tact = 0;
     int i = 0;
-    int random = 0;
+    int random = 0;         // 두더지 
     int item = 0;           // 아이템 개수
     int count = 0;          // 맞춘 개수
     int score_mole = 0;     // 두더지 점수
@@ -89,7 +89,7 @@ int main() {
         tact = open(tact_d, O_RDWR);
         read(tact, &c, sizeof(c));
         close(tact);
-        switch(c)
+        switch(c)       // 스위치 1~9번
         {
             case 1: num = 1; printf("num : %d random : %d c : %d\n", num, random, c); usleep(250000);break;
             case 2: num = 2; printf("num : %d random : %d c : %d\n", num, random, c); usleep(250000);break;
@@ -103,7 +103,7 @@ int main() {
             case 10: num = 10; printf("num : %d random : %d c : %d\n", num, random, c); usleep(250000);break;
             case 12: isStop = 1; printf("num : %d random : %d c : %d\n", num, random, c); break; 
         }
-        if(num == random)
+        if(num == random)       // 두더지를 맞췄을 때
         {
             count++;
             score_player += 1;
@@ -113,7 +113,7 @@ int main() {
             continue;
         }
 
-        if (count == 10)
+        if (count == 10)        //10번 맞췄을때
         {
             item ++;
             if(item >= 4)
@@ -130,13 +130,13 @@ int main() {
             data = 0x80;
             write(dev, &data, sizeof(unsigned char));
             usleep(3000000);
-            if (num == 10)
+            if (num == 10)              // 10번 스위치 아이템 사용
             {
                 close(dev);
                 item--;
                 num == 0;
                 int x = 1;
-                for(x;x<11;x++)        
+                for(x;x<11;x++)        // 두더지 10마리 자동으로 잡기
                 {
                     random = (rand()%9) + 1;
                     dot = open(dot_d, O_RDWR);
@@ -194,7 +194,7 @@ int main() {
                 }
             }
         }  
-        if(isStop == 1)
+        if(isStop == 1)     // 12번 스위치 = 게임 종료
         {
             break;
         }
