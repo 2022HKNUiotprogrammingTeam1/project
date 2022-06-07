@@ -71,7 +71,7 @@ https://www.youtube.com/shorts/duuKuOObT9s
 
 + **두더지 점수 CLCD에 적용**
 
-+ **플레이어와 두더지의 승,패**
++ **플레이어와 두더지의 승,패 표시**
 
 
 <br/>
