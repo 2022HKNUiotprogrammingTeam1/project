@@ -16,7 +16,7 @@
 #define tact_d "/dev/tactsw"
 
 
-unsigned char mole[9][8] = {
+unsigned char mole[9][8] = {        // 두더지 배열
     // 도트 매트릭스 화면
     {0, 96, 96, 0, 0, 0, 0, 0}, //1번두더지
     {0, 24, 24, 0, 0, 0, 0, 0}, //2번두더지
@@ -29,7 +29,7 @@ unsigned char mole[9][8] = {
     {0, 0, 0, 0, 0, 6, 6, 0}  //9번두더지
 };
 
-unsigned char printmatrix[8] = {0};
+unsigned char printmatrix[8] = {0};     // 실제로 dot matrix에 출력할 
 
 int main() {
     int dot = 0; //dotmatrix 변수
