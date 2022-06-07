@@ -35,12 +35,12 @@ int main() {
     int dot = 0; //dotmatrix 변수
     int tact = 0; //tact 변수
     int j = 0; //두더지 번호, 남은시간 초기화 변수
-    int k = 0; //두더지 번호 중복검사 변수
-    int q = 0; //출력할 매트릭스 재정의
-    int p = 0; //출력할 매트릭스 재정의
+    int k = 0; //두더지 번호 중복검사 변수1
+    int q = 0; //출력할 매트릭스 재정의1
+    int p = 0; //출력할 매트릭스 재정의2
     int z = 0; //스위치 입력 정답 검사
-    int d = 0; //두더지번호 중복검사변수
-    int u = 0; //두더지번호 중복검사변수2
+    int d = 0; //두더지번호 중복검사 변수2
+    int u = 0; //두더지번호 중복검사 변수3
     int item = 0; //item변수
     unsigned char c; //tactsw 조작 변수
     int num, isStop = 0; //숫자, 12번조작변수
