@@ -138,7 +138,7 @@ int main() {
 
         read(tact, &c, sizeof(c));
         close(tact);
-        switch(c)
+        switch(c)               // 스위치 1~9번
         {
             case 1: num = 1; printf("num : %d random : %d c : %d\n", num, random[0], c); break;
             case 2: num = 2; printf("num : %d random : %d c : %d\n", num, random[0], c); break;
@@ -154,7 +154,7 @@ int main() {
 
         for (z = 0; z < stage; z++)
         {
-            if (num == random[z])
+            if (num == random[z])           // 두더지를 맞췄을 때
             {
                 printf("맞춤\n");
                 score += 10;
@@ -181,7 +181,7 @@ int main() {
             }
         }
 
-        if (gonext == 1)
+        if (gonext == 1)        //다음 두더지 생성 판단
         {
             nextmole = 1;
             gonext = 0;
@@ -200,12 +200,12 @@ int main() {
             continue;
         }
 
-        if(isStop == 1)
+        if(isStop == 1)     // 12번 스위치 = 게임 종료
         {
             break;
         }
 
-        for (timelimit = 0; timelimit < stage; timelimit++)
+        for (timelimit = 0; timelimit < stage; timelimit++)     // 두더지를 놓치면 두더지가 점수를 획득
         {
             timeleft[timelimit] = timeleft[timelimit] + 1;
             if (timeleft[timelimit] > 10)
