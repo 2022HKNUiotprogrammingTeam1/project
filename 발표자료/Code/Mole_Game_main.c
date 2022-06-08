@@ -83,9 +83,9 @@ int main() {
     int timelimit; // 남은시간 검사변수;
     int renumber = 0; //다음두더지 재지정
     int renumber2 = 0;
-    int nextmole = 0;
-    int random[8] = { 0 };
-    int timeleft[8] = { 0 };
+    int nextmole = 0; //다음두더지 생성 판단변수
+    int random[8] = { 0 }; //두더지들의 고유번호
+    int timeleft[8] = { 0 }; //두더지들의 남은시간
     int w = 0;
     int q2 = 0;
     int p2 = 0;
@@ -132,6 +132,8 @@ int main() {
                 renumber = 0;
             }
         }
+        
+        //스테이지 시작시 매트릭스에 두더지 표시
         if (startmole == 1)
         {
             startmole = 0;
@@ -146,6 +148,7 @@ int main() {
             }
         }
 
+        //다음 두더지를 매트릭스에 추가
         if (nextmole == 1)
         {
             nextmole = 0;
@@ -188,6 +191,7 @@ int main() {
         //두더지 맞췄는지 검사
         for (z = 0; z < stage; z++)
         {
+            //두더지가 맞았으면
             if (num == random[z])
             {
                 count++;
@@ -195,16 +199,20 @@ int main() {
                 printf("점수 : %d\n", score_player);
                 clcd_input2(score_player, score_mole);
 
-                //printf("맞춤\n");
+                //매트릭스에서 맞은 두더지 제거
                 for (q2 = 0; q2 < 8; q2++)
                 {
                     printmatrix[q2] = printmatrix[q2] - mole[num-1][q2];
                     //printf("%d", printmatrix[q2]);
                 }
                 //printf("\n");
+
+                //두더지 번호 재지정, 남은시간 재지정
                 timeleft[z] = rand() % 10;
                 num = 0;
                 renumber = rand() % 9 + 1;
+
+                //두더지 중복뽑기 방지
                 for (d = 0; d < stage; d++)
                 {
                     if (renumber == random[d])
@@ -259,7 +267,7 @@ int main() {
             continue;
         }
 
-        //긴급종료 번
+        //긴급종료 변수
         if(isStop == 1)
         {
             
@@ -271,12 +279,13 @@ int main() {
         {
             //두더지 시간 + 1
             timeleft[timelimit] = timeleft[timelimit] + 1;
-            //printf("%d\n", timeleft[timelimit]);
+            //두더지를 못잡은채 시간이 지났는지 검사
             if (timeleft[timelimit] > stagetime)
             {
                 score_mole += 1;
                 clcd_input2(score_player, score_mole);
                 printf("두더지점수 : %d \n", score_mole);
+                //못잡은 두더지 매트릭스에서 제거
                 for (q3 = 0; q3 < 8; q3++)
                 {
                     printmatrix[q3] = printmatrix[q3] - mole[random[timelimit] -1][q3];    
@@ -409,6 +418,7 @@ int main() {
             }
         } 
 
+        //두더지 혹은 플레이어가 50점넘으면 종료
         if(score_mole > 50 || score_player > 50)
         {
             if(score_mole >= 30)
