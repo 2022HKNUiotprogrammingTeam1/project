@@ -15,7 +15,7 @@
 #define dot_d "/dev/dot"
 #define tact_d "/dev/tactsw"
 #define clcd_d "/dev/clcd"
-#define led "/dev/led"
+#define led_d "/dev/led"
 
 unsigned char mole[9][8] = {
     // 도트 매트릭스 화면
@@ -92,11 +92,12 @@ int main() {
     int startmole = 1;
     int k2 = 0;
     int q3 = 0;
+    int stagetime = 20;
 
     int clcd;
-    int dev;
+    int led;
     
-    unsigned char data = 0;     // led에 사용
+    unsigned char data;     // led에 사용
     
     srand(time(NULL));
     
@@ -109,8 +110,7 @@ int main() {
             isNext = 0;
             startmole = 1;  
             stage++;
-            //1stage에는 한마리, 2stage에는 2마리...동적할당
-
+            //1stage에는 한마리, 2stage에는 2마리...
             for (k2 = 0; k2 < 8; k2++)
             {
                 printmatrix[k2] = 0;
@@ -140,9 +140,9 @@ int main() {
                 for (p = 0; p < 8; p++)
                 {
                     printmatrix[p] += mole[random[q] - 1][p];
-                    printf("%d", printmatrix[p]);
+                    //printf("%d", printmatrix[p]);
                 }
-                printf("\n");
+                //printf("\n");
             }
         }
 
@@ -152,9 +152,9 @@ int main() {
             for (p2 = 0; p2 < 8; p2++)
             {
                 printmatrix[p2] += mole[renumber-1][p2];
-                printf("%d", printmatrix[p2]);
+                //printf("%d", printmatrix[p2]);
             }
-            printf("\n");
+            //printf("\n");
         }
 
         dot = open(dot_d, O_RDWR);
@@ -164,7 +164,7 @@ int main() {
             exit(0);
         }
         write(dot, &printmatrix, sizeof(printmatrix));
-        usleep(250000);
+        usleep(100000);
         close(dot);
 
         tact = open(tact_d, O_RDWR);
@@ -172,19 +172,20 @@ int main() {
         close(tact);
         switch(c)
         {
-            case 1: num = 1; printf("num : %d random : %d c : %d\n", num, random, c); usleep(250000);break;
-            case 2: num = 2; printf("num : %d random : %d c : %d\n", num, random, c); usleep(250000);break;
-            case 3: num = 3; printf("num : %d random : %d c : %d\n", num, random, c); usleep(250000);break;
-            case 4: num = 4; printf("num : %d random : %d c : %d\n", num, random, c); usleep(250000);break;
-            case 5: num = 5; printf("num : %d random : %d c : %d\n", num, random, c); usleep(250000);break;
-            case 6: num = 6; printf("num : %d random : %d c : %d\n", num, random, c); usleep(250000);break;
-            case 7: num = 7; printf("num : %d random : %d c : %d\n", num, random, c); usleep(250000);break;
-            case 8: num = 8; printf("num : %d random : %d c : %d\n", num, random, c); usleep(250000);break;
-            case 9: num = 9; printf("num : %d random : %d c : %d\n", num, random, c); usleep(250000);break;
-            case 10: num = 10; printf("num : %d random : %d c : %d\n", num, random, c); usleep(250000);break;
+            case 1: num = 1; printf("num : %d random : %d c : %d\n", num, random[0], c); usleep(100000);break;
+            case 2: num = 2; printf("num : %d random : %d c : %d\n", num, random[0], c); usleep(100000);break;
+            case 3: num = 3; printf("num : %d random : %d c : %d\n", num, random[0], c); usleep(100000);break;
+            case 4: num = 4; printf("num : %d random : %d c : %d\n", num, random[0], c); usleep(100000);break;
+            case 5: num = 5; printf("num : %d random : %d c : %d\n", num, random[0], c); usleep(100000);break;
+            case 6: num = 6; printf("num : %d random : %d c : %d\n", num, random[0], c); usleep(100000);break;
+            case 7: num = 7; printf("num : %d random : %d c : %d\n", num, random[0], c); usleep(100000);break;
+            case 8: num = 8; printf("num : %d random : %d c : %d\n", num, random[0], c); usleep(100000);break;
+            case 9: num = 9; printf("num : %d random : %d c : %d\n", num, random[0], c); usleep(100000);break;
+            case 10: num = 10; printf("num : %d random : %d c : %d\n", num, random[0], c); usleep(100000);break;
             case 12: isStop = 1; printf("num : %d random : %d c : %d\n", num, random, c); break; 
         }
 
+        //두더지 맞췄는지 검사
         for (z = 0; z < stage; z++)
         {
             if (num == random[z])
@@ -194,13 +195,13 @@ int main() {
                 printf("점수 : %d\n", score_player);
                 clcd_input2(score_player, score_mole);
 
-                printf("맞춤\n");
+                //printf("맞춤\n");
                 for (q2 = 0; q2 < 8; q2++)
                 {
                     printmatrix[q2] = printmatrix[q2] - mole[num-1][q2];
-                    printf("%d", printmatrix[q2]);
+                    //printf("%d", printmatrix[q2]);
                 }
-                printf("\n");
+                //printf("\n");
                 timeleft[z] = rand() % 10;
                 num = 0;
                 renumber = rand() % 9 + 1;
@@ -218,6 +219,7 @@ int main() {
             }
         }
 
+        //다음 두더지 생성
         if (gonext == 1)
         {
             nextmole = 1;
@@ -225,34 +227,61 @@ int main() {
             continue;
         }
 
+        // 스테이지 1 클리어
         if (score_player >= 10 && stage == 1)
         {
             isNext = 1;
+            stagetime--;
             continue;
         }
 
+        // 스테이지 2 클리어
         if (score_player > 20 && stage == 2)
         {
             isNext = 1;
+            stagetime--;
             continue;
         }
 
+        // 스테이지 3 클리어
+        if (score_player > 40 && stage == 3)
+        {
+            isNext = 1;
+            stagetime--;
+            continue;
+        }
+
+        // 스테이지 4 클리어
+        if (score_player > 50 && stage == 4)
+        {
+            isNext = 1;
+            stagetime--;
+            continue;
+        }
+
+        //긴급종료 번
         if(isStop == 1)
         {
+            
             break;
         }
 
+        //두더지 못잡았을경우
         for (timelimit = 0; timelimit < stage; timelimit++)
         {
+            //두더지 시간 + 1
             timeleft[timelimit] = timeleft[timelimit] + 1;
-            if (timeleft[timelimit] > 10)
+            //printf("%d\n", timeleft[timelimit]);
+            if (timeleft[timelimit] > stagetime)
             {
-                printf("두더지 %d 1점 get\n", timelimit+1);
+                score_mole += 1;
+                clcd_input2(score_player, score_mole);
+                printf("두더지점수 : %d \n", score_mole);
                 for (q3 = 0; q3 < 8; q3++)
                 {
                     printmatrix[q3] = printmatrix[q3] - mole[random[timelimit] -1][q3];    
                 }
-                printf("\n");
+                //printf("\n");
                 timeleft[timelimit] = 0;
                 renumber = rand() % 9 + 1;
                 for (u = 0; u < stage; u++)
@@ -279,18 +308,41 @@ int main() {
             count = 0;
         }
 
+        /*led = open(led_d, O_RDWR);
+
         if(item == 1)
         {
-            dev = open(led, O_RDWR);
-            if(dev < 0) {printf("Can't Open\n"); exit(0);}  
-            data = 0x80;
-            write(dev, &data, sizeof(unsigned char));
-            
+            data = 0xfe;
+            write(led, &data, sizeof(unsigned char));
+            usleep(100000);
+        }
+        else
+        {
+            data = 0x00;
+            write(led, &data, sizeof(unsigned char));
+            usleep(100000);
+        }*/
+        
+
+
+        /*if(item == 2)
+        {
+            data = 0x7f;
+        }
+         */
+
+        if(item == 1)
+        {
+            led = open(led_d, O_RDWR);
+            if(led < 0) {printf("Can't Open\n"); exit(0);}  
+            data = 0x7f;
+            write(led, &data, sizeof(unsigned char));
+            usleep(1);
             if (num == 10)
             {
-                close(dev);
+                data = 0xff;
                 item--;
-                num == 0;
+                num = 0; // num값 초기화
                 int x = 1;
                 for(x;x<11;x++)        
                 {
@@ -306,14 +358,17 @@ int main() {
         }
         else if(item == 2)
         {
-            data = 0xc0;
-            write(dev, &data, sizeof(unsigned char));
+            led = open(led_d, O_RDWR);
+            if(led < 0) {printf("Can't Open\n"); exit(0);}
+            data = 0x3f;
+            write(led, &data, sizeof(unsigned char));
+            usleep(1);
             if (num == 10)
             {
-                data = 0x80;
-                write(dev, &data, sizeof(unsigned char));
+                data = 0x7f;
+                write(led, &data, sizeof(unsigned char));
                 item--;
-                num == 0;
+                num = 0;
                 int x = 1;
                 for(x;x<11;x++)        
                 {
@@ -329,14 +384,17 @@ int main() {
         }
         else if(item == 3)
         {
-            data = 0xe0;
-            write(dev, &data, sizeof(unsigned char));
+            close(led);
+            led = open(led_d, O_RDWR);
+            if(led < 0) {printf("Can't Open\n"); exit(0);}
+            data = 0x1f;
+            write(led, &data, sizeof(unsigned char));
             if (num == 10)
             {
-                data = 0x80;
-                write(dev, &data, sizeof(unsigned char));
+                data = 0x3f;
+                write(led, &data, sizeof(unsigned char));
                 item--;
-                num == 0;
+                num = 0;
                 int x = 1;
                 for(x;x<11;x++)        
                 {
@@ -349,9 +407,28 @@ int main() {
                     printf("score_player : %d\n", score_player);   
                 }
             }
-        }   
+        } 
+
+        if(score_mole > 50 || score_player > 50)
+        {
+            if(score_mole >= 30)
+            {
+                printf("두더지 승리!\n");
+                clcd_input2(score_player, score_mole);
+                close(clcd);
+            }  
+
+            if(score_player >= 50)
+            {
+                printf("플레이어 승리!\n");
+                clcd_input2(score_player, score_mole);
+                close(clcd);
+            }
+            printf("게임을 종료합니다.\n");
+            break;
+        }
     }
     close(clcd);
-    close(dev);
+    close(led);
     return 0;
 }
