@@ -317,29 +317,6 @@ int main() {
             count = 0;
         }
 
-        /*led = open(led_d, O_RDWR);
-
-        if(item == 1)
-        {
-            data = 0xfe;
-            write(led, &data, sizeof(unsigned char));
-            usleep(100000);
-        }
-        else
-        {
-            data = 0x00;
-            write(led, &data, sizeof(unsigned char));
-            usleep(100000);
-        }*/
-        
-
-
-        /*if(item == 2)
-        {
-            data = 0x7f;
-        }
-         */
-
         if(item == 1)
         {
             led = open(led_d, O_RDWR);
